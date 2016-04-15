@@ -1,6 +1,6 @@
 use std::ops;
 
-#[derive(Hash, Eq, PartialEq, Debug)]
+#[derive(Hash, Eq, PartialEq, Debug, Clone, Copy)]
 pub struct Point {
     pub x: u32,
     pub y: u32,
@@ -49,7 +49,7 @@ mod tests {
 
     #[test]
     fn new_test() {
-        let subject = Point::new();
+        Point::new();
     }
 
     #[test]
@@ -95,7 +95,7 @@ mod tests {
     fn debug_test() {
         let a = Point { x: 5, y: 7 };
 
-        let subject = format!("{:?}", a);
+        format!("{:?}", a);
     }
 
     #[test]
