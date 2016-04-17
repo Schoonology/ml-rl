@@ -22,6 +22,14 @@ impl Rect {
     pub fn contains(&self, point:&Point) -> bool {
         self.max.x >= point.x && self.max.y >= point.y && self.min.x <= point.x && self.min.y <= point.y
     }
+
+    pub fn width(&self) -> u32 {
+        self.max.x - self.min.x
+    }
+
+    pub fn height(&self) -> u32 {
+        self.max.y - self.min.x
+    }
 }
 
 #[cfg(test)]
